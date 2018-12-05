@@ -3,9 +3,9 @@
 Plugin Name: Supervisor
 Version: 1.0.0.0
 Description: Plugin pour ajouter un supervisor à un album.
-Plugin URI:
+Plugin URI: https://github.com/Teatek/SupervisorAlbum
 Author: Moi
-Author URI: 
+Author URI: https://github.com/Teatek/
 */
 
 //Vérifiez si nous sommes bien inclus par Piwigo.
