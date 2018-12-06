@@ -60,10 +60,11 @@ function supervisor_admin_menu($menu) {
  );
  return $menu;
 }
+
 //---------------------------------------------------------
 
 // ajout d'un event
-
+/* Tentative d'ajout d'un texte dans la page de l'album
 add_event_handler('loc_end_picture', 'spi_end_picture');
 
 function spi_end_picture()
@@ -93,7 +94,7 @@ function spi_picture_prefilter($content, &$smarty)
   $content = str_replace($search, $replace, $content);
 
   return $content;
-}
+}*/
 
 function Supervisor_init()
 {
