@@ -1,0 +1,4 @@
+File automatically created from SVN or Git repository.
+
+URL: https://github.com/Teatek/SupervisorAlbum 
+Revision: 669b8c0e8ed5cc4ee768509af91652231fceb4e6 (Wed Dec 5 23:05:15 2018 +0100)

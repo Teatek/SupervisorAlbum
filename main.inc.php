@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Supervisor
-Version: 1.0.0.0
+Version: 1.1
 Description: Plugin pour ajouter un supervisor à un album.
-Plugin URI: https://piwigo.org/ext/extension_view.php?eid=883
+Plugin URI: http://piwigo.org/ext/extension_view.php?eid=883
 Author: Teatek
 Author URI: https://github.com/Teatek/
 */
@@ -47,7 +47,6 @@ add_event_handler('init', 'supervisor_init');
 add_event_handler('get_admin_plugin_menu_link', 'supervisor_admin_menu');
 
 
-
 $conf['supervisor'] = safe_unserialize($conf['supervisor']);
 
 // Ajout un menu admin du plugin
@@ -66,6 +65,7 @@ function supervisor_admin_menu($menu) {
 // ajout d'un event
 
 add_event_handler('loc_end_picture', 'spi_end_picture');
+
 function spi_end_picture()
 {
   global $template, $picture;
@@ -94,9 +94,6 @@ function spi_picture_prefilter($content, &$smarty)
 
   return $content;
 }
-
-//---------------------------------------------------------------
-
 
 function Supervisor_init()
 {

@@ -4,7 +4,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 //Va chercher le modèle.
 global $template;
 
-// Ajout de notre template dans notre template globale
+// Ajout du template dans le template globale
 $template->set_filenames(
  array(
    'plugin_admin_content' => dirname(__FILE__).'/admin.tpl'
