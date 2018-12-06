@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Supervisor
+Plugin Name: SupervisorAlbum
 Version: 1.1
 Description: Plugin pour ajouter un supervisor à un album.
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=883
@@ -18,7 +18,7 @@ if (basename(dirname(__FILE__)) != 'supervisor')
   function supervisor_error()
   {
     global $page;
-    $page['errors'][] = 'supervisor folder name is incorrect, uninstall the plugin and rename it to "supervisor"';
+    $page['errors'][] = 'SupervisorAlbum folder name is incorrect, uninstall the plugin and rename it to "SupervisorAlbum"';
   }
   return;
 }
