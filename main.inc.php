@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: SupervisorAlbum
-Version: 1.1
+Version: 1.2
 Description: Plugin pour ajouter un supervisor à un album.
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=883
 Author: Teatek
@@ -61,40 +61,24 @@ function supervisor_admin_menu($menu) {
  return $menu;
 }
 
-//---------------------------------------------------------
+//------------------------
 
-// ajout d'un event
-/* Tentative d'ajout d'un texte dans la page de l'album
-add_event_handler('loc_end_picture', 'spi_end_picture');
-
-function spi_end_picture()
+add_event_handler('loc_end_section_init', 'supervisor_end_section_init');
+function supervisor_end_section_init()
 {
-  global $template, $picture;
+   global $page;
 
-  $template->set_prefilter('picture', 'spi_picture_prefilter');
+   if(isset($page['comment']))
+   {
+     $page['comment'] = $page['comment']."</div>".
+     '<div class="additional_info" >test pour ajouter un supervisor</div>';
+   }
 
-  $template->assign(
-    array(
-      'IMAGE_ID' => $picture['current']['id'],
-      )
-    );
+
+
 }
 
-function spi_picture_prefilter($content, &$smarty)
-{
-  $search = '{if $display_info.rating_score';
-
-  $replace = '
-	<div id="ImageId" class="imageInfo">
-		<dt>{\'Image id\'|@translate}</dt>
-		<dd>{$IMAGE_ID}</dd>
-	</div>
-'.$search;
-
-  $content = str_replace($search, $replace, $content);
-
-  return $content;
-}*/
+//---------------------------
 
 function Supervisor_init()
 {
