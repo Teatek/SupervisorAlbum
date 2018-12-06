@@ -83,7 +83,10 @@ function supervisor_end_section_init()
     {
       if(isset($page['comment']))
       {
-        $page['comment'] = $page['comment'].'</div><div class="additional_info">'.$valeur['champs']."</div>";
+        $page['comment'] = $page['comment'].'</div><div class="additional_info">'.$valeur['champs'];
+      /*}else{
+        $page['comment'] = '</div><div class="additional_info">'.$valeur['champs'];
+        */
       }
     }
    }
