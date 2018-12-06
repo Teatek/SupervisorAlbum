@@ -68,14 +68,25 @@ function supervisor_end_section_init()
 {
    global $page;
 
-   if(isset($page['comment']))
+   if(isset($page['category']['id']) && isset($page['comment']))
    {
-     $page['comment'] = $page['comment']."</div>".
-     '<div class="additional_info" >test pour ajouter un supervisor</div>';
+     $idCategorie = $page['category']['id'];
+
+
+     $query = '
+  SELECT champs FROM '.SUPERVISOR_TABLE.
+  ' s INNER JOIN '.CATEGORIES_TABLE.' c on c.id_supervisor = s.id'.
+  ' WHERE c.id='.$idCategorie;
+
+    $supervisor = query2array($query);
+    foreach ($supervisor as $key => $valeur)
+    {
+      if(isset($page['comment']))
+      {
+        $page['comment'] = $page['comment'].'</div><div class="additional_info">'.$valeur['champs']."</div>";
+      }
+    }
    }
-
-
-
 }
 
 //---------------------------
