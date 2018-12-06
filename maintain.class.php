@@ -6,7 +6,7 @@ defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
  * It must extends PluginMaintain and be named "PLUGINID_maintain"
  * where PLUGINID is the directory name of your plugin.
  */
-class supervisor_maintain extends PluginMaintain
+class SupervisorAlbum_maintain extends PluginMaintain
 {
   private $default_conf = array(
     );

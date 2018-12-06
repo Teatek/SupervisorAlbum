@@ -11,7 +11,7 @@ Author URI: https://github.com/Teatek/
 //Vérifiez si nous sommes bien inclus par Piwigo.
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
-if (basename(dirname(__FILE__)) != 'supervisor')
+if (basename(dirname(__FILE__)) != 'SupervisorAlbum')
 {
   add_event_handler('init', 'supervisor_error');
 
