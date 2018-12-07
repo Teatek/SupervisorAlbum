@@ -61,9 +61,9 @@ function supervisor_admin_menu($menu) {
  return $menu;
 }
 
-//------------------------
-
 add_event_handler('loc_end_section_init', 'supervisor_end_section_init');
+
+
 function supervisor_end_section_init()
 {
    global $page;
@@ -71,7 +71,6 @@ function supervisor_end_section_init()
    if(isset($page['category']['id']) && isset($page['comment']))
    {
      $idCategorie = $page['category']['id'];
-
 
      $query = '
   SELECT champs FROM '.SUPERVISOR_TABLE.
@@ -84,15 +83,11 @@ function supervisor_end_section_init()
       if(isset($page['comment']))
       {
         $page['comment'] = $page['comment'].'</div><div class="additional_info">'.$valeur['champs'];
-      /*}else{
-        $page['comment'] = '</div><div class="additional_info">'.$valeur['champs'];
-        */
       }
     }
    }
 }
 
-//---------------------------
 
 function Supervisor_init()
 {
