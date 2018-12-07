@@ -44,17 +44,15 @@ define('SUPERVISOR_DIR',     PHPWG_ROOT_PATH . PWG_LOCAL_DIR . 'supervisor/');
 add_event_handler('init', 'supervisor_init');
 
 // trigger pour afficher la page d'administration.
-add_event_handler('get_admin_plugin_menu_link', 'supervisor_admin_menu');
+add_event_handler('get_admin_plugin_menu_links', 'supervisor_admin_menu');
 
-
-$conf['supervisor'] = safe_unserialize($conf['supervisor']);
 
 // Ajout un menu admin du plugin
 function supervisor_admin_menu($menu) {
  array_push(
    $menu,
    array(
-     'NAME'  => 'supervisor',
+     'NAME'  => 'SupervisorAlbum',
      'URL'   => get_admin_plugin_menu_link(dirname(__FILE__)).'/admin/admin.php'
    )
  );

@@ -7,5 +7,5 @@
 <fieldset>
  <legend>{'Un plugin '|@translate}</legend>
 
- {'Page d'administration du plugin (à faire)'|@translate}
+ {'Page du plugin'|@translate}
 </fieldset>
